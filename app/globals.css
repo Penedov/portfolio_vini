@@ -2,20 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+    body {
+        @apply font-primary bg-primary text-white leading-loose;
+      /* Aplica classes Tailwind globais ao body:
+      - font-primary: Usa a fonte JetBrains Mono.
+      - bg-primary: Define a cor de fundo principal.
+      - text-white: Texto branco.
+      - leading-loose: Espaçamento entre linhas confortável. */
+    }
 }
