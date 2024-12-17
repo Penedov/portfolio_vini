@@ -1,6 +1,9 @@
 import { JetBrains_Mono } from "next/font/google"; // Importa a fonte do Google.
 import "./globals.css"; // Importa estilos globais.
 
+//componentes
+import Header from "@/components/Header";
+
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"], // Apenas caracteres latinos.
   weight: [
@@ -18,8 +21,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en"> {/* Define a linguagem para melhorar acessibilidade e SEO. */}
-      <body className={jetbrainsMono.variable}> {/* Aplica a fonte global configurada. */}
+    <html lang="en"> 
+      <body className={jetbrainsMono.variable}>
+        <Header />
         {children} {/* Renderiza os componentes filhos dentro do layout. */}
       </body>
     </html>
