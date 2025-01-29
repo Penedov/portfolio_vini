@@ -3,6 +3,7 @@ import "./globals.css"; // Importa estilos globais.
 
 //componentes
 import Header from "@/components/Header";
+import PageTransition from "@/components/PageTransition";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"], // Apenas caracteres latinos.
@@ -24,7 +25,10 @@ export default function RootLayout({ children }) {
     <html lang="en"> 
       <body className={jetbrainsMono.variable}>
         <Header />
-        {children} {/* Renderiza os componentes filhos dentro do layout. */}
+        <PageTransition>{children} 
+        {/* Renderiza os componentes filhos dentro do layout. */}</PageTransition>
+        
+        
       </body>
     </html>
   );
