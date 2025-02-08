@@ -1,9 +1,10 @@
 "use client";
 
-import {Sheet, SheetContent, SheetTrigger, SheetTitle} from "@/components/ui/sheet";
+import {Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription} from "@/components/ui/sheet";
 import {usePathname} from "next/navigation";
 import Link from "next/link";
 import {CiMenuFries} from "react-icons/ci";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 const links = [
     {
@@ -34,7 +35,8 @@ const MobileNav = () => {
             <SheetContent className="flex flex-col">
                 {/* Adicionando o SheetTitle */}
                 <SheetTitle className="sr-only">Menu de Navegação</SheetTitle>
-
+                <VisuallyHidden><SheetDescription>Tela de Navegação Celular</SheetDescription>
+                </VisuallyHidden>
                 {/* Logo */}
                 <div className="mt-32 mb-40 text-center text-2x1">
                     <Link href="/">
