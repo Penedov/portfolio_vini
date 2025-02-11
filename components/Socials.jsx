@@ -11,7 +11,8 @@ const socials = [
 
 const Socials = ({containerStyles, iconStyles}) => {
     return (
-        <div className={containerStyles}>
+        <div className={`${containerStyles} flex items-center space-x-4`}>
+
             {socials.map((items,index) => {
                 return (
                     <Link key={index} href={items.path} className={iconStyles}>
