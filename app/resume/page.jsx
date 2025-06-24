@@ -20,68 +20,68 @@ import { motion } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const about = {
-  title: "About me",
+  title: "Sobre mim",
   description:
-    "I am a front-end developer with a passion for creating beautiful, responsive, and user-friendly websites. I have experience with HTML, CSS, JavaScript, React, and Next.js. I am always looking for new challenges and opportunities to learn and grow as a developer.",
+    "Sou um desenvolvedor front-end apaixonado por criar sites bonitos, responsivos e fáceis de usar. Tenho experiência com HTML, CSS, JavaScript, React e Next.js. Estou sempre em busca de novos desafios e oportunidades para aprender e crescer como desenvolvedor.",
   Info: [
     {
-      fieldname: "Name",
+      fieldname: "Nome",
       fieldvalue: "Vinicius",
     },
     {
-      fieldname: "Phone",
+      fieldname: "Telefone",
       fieldvalue: "(11) 95895-3041",
     },
     {
-      fieldname: "Experience",
-      fieldvalue: "1 year",
+      fieldname: "Experiência",
+      fieldvalue: "1 ano",
     },
     {
       fieldname: "Instagram",
       fieldvalue: "Vini.Penedo",
     },
     {
-      fieldname: "Nationality",
-      fieldvalue: "Brazilian",
+      fieldname: "Nacionalidade",
+      fieldvalue: "Brasileiro",
     },
     {
-      fieldname: "email",
+      fieldname: "E-mail",
       fieldvalue: "Viniciuspenedo2003@gmail.com",
     },
     {
       fieldname: "Freelance",
-      fieldvalue: "available",
+      fieldvalue: "disponível",
     },
     {
-      fieldname: "Language",
-      fieldvalue: "Portuguese, English",
+      fieldname: "Idiomas",
+      fieldvalue: "Português, Inglês",
     },
   ],
 };
 
 const experience = {
   icon: "/assets/resume/badge.svg",
-  title: "My Experience",
-  description:"I have been working as a front-end developer for the past 2 years. I have experience with HTML, CSS, JavaScript, React, and Next.js. I am always looking for new challenges and opportunities to learn and grow as a developer.",
+  title: "Minha Experiência",
+  description:"Atuo como desenvolvedor front-end há 2 anos. Tenho experiência com HTML, CSS, JavaScript, React e Next.js. Estou sempre em busca de novos desafios e oportunidades para aprender e crescer como desenvolvedor.",
   items: [
     {
       company: "Google",
-      position: "Front-end Developer",
-      duration: "2020 - Present",
+      position: "Desenvolvedor Front-end",
+      duration: "2020 - Presente",
     },
     {
       company: "Facebook",
-      position: "Front-end Developer",
+      position: "Desenvolvedor Front-end",
       duration: "2018 - 2020",
     },
     {
       company: "Twitter",
-      position: "Front-end Developer",
+      position: "Desenvolvedor Front-end",
       duration: "2016 - 2018",
     },
     {
       company: "LinkedIn",
-      position: "Front-end Developer",
+      position: "Desenvolvedor Front-end",
       duration: "2014 - 2016",
     },
   ]
@@ -89,29 +89,24 @@ const experience = {
 
 const education = {
   icon: "/assets/resume/cap.svg",
-  title: "My Education",
-  description:"My graduate degree is in Computer Science from the University of California, Berkeley. I have a strong background in computer science and programming. I am passionate about using technology to solve problems and make a positive impact on the world.",
+  title: "Minha Formação",
+  description:"Sou graduado em Ciência da Computação pela Universidade da Califórnia, Berkeley. Tenho uma sólida formação em ciência da computação e programação. Sou apaixonado por usar tecnologia para resolver problemas e causar um impacto positivo no mundo.",
   items:[ {
-    institution: "University of California",
-    degree: "Bachelor of Science in Computer Science",
+    institution: "Universidade da Califórnia",
+    degree: "Bacharelado em Ciência da Computação",
     duration: "2010 - 2014",
     },
     {
-    institution: "Stanford University",
-    degree: "Master of Science in Computer Science",
+    institution: "Universidade de Stanford",
+    degree: "Mestrado em Engenharia de Software",
     duration: "2014 - 2016",
     },
-    {
-    institution: "Harvard University",
-    degree: "Doctor of Philosophy in Computer Science",
-    duration: "2016 - 2020",
-    },
-  ],
+  ]
 };
 
 const skills = {
-  title: "My Skills",
-  description: "I have experience with HTML, CSS, JavaScript, React, and Next.js. I am always looking for new challenges and opportunities to learn and grow as a developer.",
+  title: "Minhas Habilidades",
+  description: "Tenho experiência com HTML, CSS, JavaScript, React e Next.js. Estou sempre em busca de novos desafios e oportunidades para aprender e crescer como desenvolvedor.",
   skillsList :[
     {
       icon: <FaHtml5 />,
@@ -167,10 +162,10 @@ const Resume = () => {
           className="flex flex-col xl:flex-row gap-[60px]"
         >
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-            <TabsTrigger value="experience">Experience</TabsTrigger>
-            <TabsTrigger value="education">Education</TabsTrigger>
-            <TabsTrigger value="skills">Skills</TabsTrigger>
-            <TabsTrigger value="about">About me</TabsTrigger>
+            <TabsTrigger value="experience">Experiência</TabsTrigger>
+            <TabsTrigger value="education">Formação</TabsTrigger>
+            <TabsTrigger value="skills">Habilidades</TabsTrigger>
+            <TabsTrigger value="about">Sobre mim</TabsTrigger>
           </TabsList>
 
           {/* content */}

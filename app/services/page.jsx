@@ -7,26 +7,26 @@ import { motion } from "framer-motion";
 const services = [
     {
         num:'01',
-        title: "Web Development",
-        description: "We build websites that are fast, secure, and easy to use.",
+        title: "Desenvolvimento Web",
+        description: "Construímos sites rápidos, seguros e fáceis de usar.",
         href:'/services/web-development',
     },
     {
         num:'02',
-        title: "UI/UX Design",
-        description: "We build websites that are fast, secure, and easy to use.",
+        title: "Design UI/UX",
+        description: "Construímos sites rápidos, seguros e fáceis de usar.",
         href:'/services/web-development',
     },
     {
         num:'03',
-        title: "logo Design",
-        description: "We build websites that are fast, secure, and easy to use.",
+        title: "Design de Logo",
+        description: "Construímos sites rápidos, seguros e fáceis de usar.",
         href:'/services/web-development',
     },
     {
         num:'04',
         title: "SEO",
-        description: "We build websites that are fast, secure, and easy to use.",
+        description: "Construímos sites rápidos, seguros e fáceis de usar.",
         href:'/services/web-development',
     }
 ];
