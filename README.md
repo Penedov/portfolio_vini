@@ -1,6 +1,6 @@
 <br/>
 <div align="center">
-  <img src="https://raw.githubusercontent.com/penedov/portfolio_vini/main/public/assets/face.png" width="150" alt="Logo">
+  <img src="public/assets/face.png" width="150" alt="Logo">
   <h1 align="center" style="color: #00ff99; font-size: 3rem;">Portfólio Vini</h1>
   <p align="center">
     <strong>Um portfólio de desenvolvedor moderno e elegante, construído com as tecnologias mais recentes para uma experiência de usuário excepcional.</strong>
