@@ -15,7 +15,7 @@
 </div>
 
 <div align="center">
-  <img src="https://i.imgur.com/8b1nZ9G.gif" alt="Animação do Portfólio" style="border-radius: 10px;"/>
+  <img src="[https://i.imgur.com/8b1nZ9G.gif](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXB4d2c3MmF0eHl2ZjRrZjNxdmZpd3lvYmxoNHEwNTgzZGlsM2J1dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VVvcpqq3R34dClYgee/giphy.gif)" alt="Animação do Portfólio" style="border-radius: 10px;"/>
 </div>
 
 ---
