@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<br/>
+<div align="center">
+  <img src="https://raw.githubusercontent.com/penedov/portfolio_vini/main/public/assets/face.png" width="150" alt="Logo">
+  <h1 align="center" style="color: #00ff99; font-size: 3rem;">Portfólio Vini</h1>
+  <p align="center">
+    <strong>Um portfólio de desenvolvedor moderno e elegante, construído com as tecnologias mais recentes para uma experiência de usuário excepcional.</strong>
+  </p>
+  <p align="center">
+    <a href="#-sobre-o-projeto">Sobre</a> •
+    <a href="#-principais-recursos">Recursos</a> •
+    <a href="#-design-e-estilo">Design</a> •
+    <a href="#-tecnologias-utilizadas">Tecnologias</a> •
+    <a href="#-como-executar">Executando</a>
+  </p>
+</div>
 
-## Getting Started
+<div align="center">
+  <img src="https://i.imgur.com/8b1nZ9G.gif" alt="Animação do Portfólio" style="border-radius: 10px;"/>
+</div>
 
-First, run the development server:
+---
+
+## 🚀 Sobre o Projeto
+
+Este projeto é a minha vitrine profissional, um espaço onde demonstro minhas habilidades em desenvolvimento de software e design de interfaces. O objetivo foi criar uma experiência digital fluida e visualmente impactante, que não só apresentasse meus trabalhos, mas que também fosse um projeto do qual me orgulhasse.
+
+Inspirado em designs modernos, com um tema escuro (`#1c1c22`) e uma cor de destaque vibrante (`#00ff99`), o portfólio utiliza animações sofisticadas para guiar o usuário de forma intuitiva através das seções.
+
+## ✨ Principais Recursos
+
+- **🎨 Design Moderno:** Interface com tema escuro, tipografia `JetBrains Mono` e a cor de destaque `#00ff99` para uma estética profissional e tecnológica.
+- **🎬 Animações Fluidas:** Transições de página suaves com `Framer Motion`, incluindo um efeito de escada (`Stairs`) e um pré-carregamento elegante.
+- **🖼️ Elementos Interativos:** Componentes como o círculo animado ao redor da foto, contadores de estatísticas (`CountUp`) e um carrossel de projetos (`Swiper`) tornam a navegação mais dinâmica.
+- **📱 Totalmente Responsivo:** Design que se adapta perfeitamente a qualquer tamanho de tela, do desktop ao mobile.
+- **📂 Seções Completas:** Apresenta seções como Serviços, Resumo, Projetos e Contato, oferecendo uma visão completa do meu perfil profissional.
+- **💼 Componentes Reutilizáveis:** Construído com `shadcn/ui` e `Radix UI`, garantindo componentes de alta qualidade, acessíveis e personalizáveis.
+
+## 🎨 Design e Estilo
+
+A identidade visual foi um dos pilares deste projeto. A paleta de cores foi escolhida para transmitir seriedade e modernidade, com um toque de ousadia.
+
+- **Cor Primária (Fundo):** `#1c1c22`
+- **Cor de Destaque (Accent):** `#00ff99`
+- **Fonte Principal:** `JetBrains Mono`
+
+As animações foram criadas com `Framer Motion` para não serem apenas um detalhe, mas parte fundamental da experiência, como pode ser visto nos arquivos `StairTransition.jsx` e `Photo.jsx`. O círculo animado, por exemplo, usa a técnica `strokeDasharray` para criar um efeito de movimento contínuo e hipnotizante.
+
+## 🛠️ Tecnologias Utilizadas
+
+Este projeto foi construído utilizando um ecossistema moderno de desenvolvimento web:
+
+- **Next.js:** Framework React para renderização no lado do servidor e geração de sites estáticos.
+- **React:** Biblioteca para construir interfaces de usuário.
+- **Tailwind CSS:** Framework CSS utility-first para estilização rápida e customizável.
+- **Framer Motion:** Biblioteca de animação para criar transições complexas e fluidas.
+- **shadcn/ui:** Coleção de componentes de UI reutilizáveis.
+- **Swiper.js:** Carrossel moderno para projetos e depoimentos.
+- **React CountUp:** Para animar números e estatísticas de forma dinâmica.
+- **Lucide & React Icons:** Para uma vasta gama de ícones SVG.
+
+<div align="center">
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js"/>
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"/>
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS"/>
+  <img src="https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white" alt="Framer Motion"/>
+</div>
+
+## ⚙️ Como Executar
+
+Para executar este projeto localmente, siga os passos abaixo:
 
 ```bash
+# 1. Clone o repositório
+git clone [https://github.com/seu-usuario/portfolio_vini.git](https://github.com/seu-usuario/portfolio_vini.git)
+
+# 2. Navegue até o diretório do projeto
+cd portfolio_vini
+
+# 3. Instale as dependências
+npm install
+
+# 4. Inicie o servidor de desenvolvimento
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) no seu navegador para ver o resultado.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+<p align="center">
+  Feito com 💚 por Vinicius Penedo
+</p>
