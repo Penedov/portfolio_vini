@@ -22,13 +22,13 @@
 
 ## 🚀 Sobre o Projeto
 
-Este projeto é a minha vitrine profissional, um espaço onde demonstro minhas habilidades em desenvolvimento de software e design de interfaces. O objetivo foi criar uma experiência digital fluida e visualmente impactante, que não só apresentasse meus trabalhos, mas que também fosse um projeto do qual me orgulhasse.
+Este projeto é a minha vitrine profissional, um espaço onde demonstro minhas habilidades em desenvolvimento de software e design de interfaces. Este projeto nasceu do desafio de aplicar e aprofundar meus conhecimentos, seguindo um tutorial como base para construir uma experiência digital fluida e visualmente impactante. O resultado é uma demonstração prática das minhas habilidades e um trabalho do qual me orgulho.
 
-Inspirado em designs modernos, com um tema escuro (`#1c1c22`) e uma cor de destaque vibrante (`#00ff99`), o portfólio utiliza animações sofisticadas para guiar o usuário de forma intuitiva através das seções.
+Inspirado em designs modernos e com uma identidade visual marcante, o portfólio utiliza animações sofisticadas para guiar o usuário de forma intuitiva através das seções.
 
 ## ✨ Principais Recursos
 
-- **🎨 Design Moderno:** Interface com tema escuro, tipografia `JetBrains Mono` e a cor de destaque `#00ff99` para uma estética profissional e tecnológica.
+- **🎨 Design Moderno:** Interface com tema escuro, tipografia `JetBrains Mono` e uma cor de destaque vibrante para uma estética profissional e tecnológica.
 - **🎬 Animações Fluidas:** Transições de página suaves com `Framer Motion`, incluindo um efeito de escada (`Stairs`) e um pré-carregamento elegante.
 - **🖼️ Elementos Interativos:** Componentes como o círculo animado ao redor da foto, contadores de estatísticas (`CountUp`) e um carrossel de projetos (`Swiper`) tornam a navegação mais dinâmica.
 - **📱 Totalmente Responsivo:** Design que se adapta perfeitamente a qualquer tamanho de tela, do desktop ao mobile.
@@ -39,8 +39,8 @@ Inspirado em designs modernos, com um tema escuro (`#1c1c22`) e uma cor de desta
 
 A identidade visual foi um dos pilares deste projeto. A paleta de cores foi escolhida para transmitir seriedade e modernidade, com um toque de ousadia.
 
-- **Cor Primária (Fundo):** `#1c1c22`
-- **Cor de Destaque (Accent):** `#00ff99`
+- **Cor Primária (Fundo):** <img src="https://placehold.co/15x15/1c1c22/1c1c22.png" alt="Cor Primária"> `#1c1c22`
+- **Cor de Destaque (Accent):** <img src="https://placehold.co/15x15/00ff99/00ff99.png" alt="Cor de Destaque"> `#00ff99`
 - **Fonte Principal:** `JetBrains Mono`
 
 As animações foram criadas com `Framer Motion` para não serem apenas um detalhe, mas parte fundamental da experiência, como pode ser visto nos arquivos `StairTransition.jsx` e `Photo.jsx`. O círculo animado, por exemplo, usa a técnica `strokeDasharray` para criar um efeito de movimento contínuo e hipnotizante.
