@@ -22,7 +22,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 const about = {
   title: "Sobre mim",
   description:
-    "Sou um desenvolvedor front-end apaixonado por criar sites bonitos, responsivos e fáceis de usar. Tenho experiência com HTML, CSS, JavaScript, React e Next.js. Estou sempre em busca de novos desafios e oportunidades para aprender e crescer como desenvolvedor.",
+    "Desenvolvedor com forte interesse em back-end e ambição de me tornar um profissional full-stack. Embora tenha mais experiência com PHP, minha paixão está em aprender e construir projetos com tecnologias como Java e TypeScript. Estou em busca da minha primeira oportunidade para colaborar em projetos desafiadores e continuar crescendo na área.",
   Info: [
     {
       fieldname: "Nome",
@@ -61,28 +61,20 @@ const about = {
 
 const experience = {
   icon: "/assets/resume/badge.svg",
-  title: "Minha Experiência",
-  description:"Atuo como desenvolvedor front-end há 2 anos. Tenho experiência com HTML, CSS, JavaScript, React e Next.js. Estou sempre em busca de novos desafios e oportunidades para aprender e crescer como desenvolvedor.",
+  title: "Experiência com Projetos",
+  description:"Participei de projetos práticos que me permitiram aplicar e aprimorar minhas habilidades em desenvolvimento front-end e back-end. Trabalhei em equipe e de forma independente para criar soluções funcionais, desde a concepção até a implementação.",
   items: [
     {
-      company: "Google",
-      position: "Desenvolvedor Front-end",
-      duration: "2020 - Presente",
+      company: "Projeto Pessoal",
+      position: "Desenvolvedor PHP",
+      duration: "2024",
+      work:" Criei um marketplace funcional com foco no back-end, implementando um CRUD completo. O maior aprendizado foi lidar com a integração de APIs e a autenticação de usuários, o que solidificou meu entendimento de PHP e Laravel.",
     },
     {
-      company: "Facebook",
+      company: "Projeto de TCC (Etec)",
       position: "Desenvolvedor Front-end",
-      duration: "2018 - 2020",
-    },
-    {
-      company: "Twitter",
-      position: "Desenvolvedor Front-end",
-      duration: "2016 - 2018",
-    },
-    {
-      company: "LinkedIn",
-      position: "Desenvolvedor Front-end",
-      duration: "2014 - 2016",
+      duration: "2024 - 2025",
+      work: "Colaborei no desenvolvimento de uma plataforma de monitoria digital. Fui responsável pela estruturação do layout e pela implementação de funcionalidades no front-end com Next.js e TypeScript, aprendendo a arquitetura da aplicação e a transformar ideias em componentes interativos.",
     },
   ]
 }
@@ -178,15 +170,20 @@ const Resume = () => {
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {experience.items.map((item, index) => {
                     return (
-                      <li key={index} className="bg-[#232329] h-[184px] p-6 px-10 rounded-xl flex flex-col justify-center lg:items-start gap-1">
-                        <span className="text-accent">{item.duration}</span>
-                        <h3 className="text-xl  max-w-[260px]min-h-[60p] text-center lg:text-left">{item.position}</h3>
-                        <div className="flex items-center gap-3">
-                          {/*dat*/}
-                          <span  className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                          <p className="text-white/60">{item.company}</p>
-                        </div>
-                      </li>
+                      <li
+  key={index}
+  className="bg-[#232329] p-6 rounded-xl flex flex-col justify-center lg:items-start gap-1 max-w-full"
+>
+  <span className="text-accent">{item.duration}</span>
+  <h3 className="text-xl min-h-[40px] text-center lg:text-left break-words">
+    {item.position}
+  </h3>
+  <div className="flex items-center gap-3">
+    <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+    <p className="text-white/60 break-words">{item.company}</p>
+  </div>
+  <p className="text-white/60 mt-2 text-sm break-words">{item.work}</p>
+</li>
                     )                  
                     })}</ul>
                 </ScrollArea>

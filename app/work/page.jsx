@@ -20,25 +20,25 @@ import WorkSliderBtns from "@/components/ui/WorkSliderBtns";
 const projects = [
   {
     num: "01",
-    category: "frontend",
-    title: "Projeto 1",
+    category: "fullstack",
+    title: "Marketplace em PHP",
     description:
-      "Um site de portfólio construído com Next.js, Tailwind CSS e Framer Motion.",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "javascript" }],
-    image: "/assets/work/thumb1.png",
-    live: "",
-    Github: "",
+      "Desenvolvimento de um sistema de marketplace com um CRUD completo, focando na lógica de back-end, integração de APIs e autenticação de usuários.",
+    stack: [{ name: "PHP" }, { name: "Laravel" }, { name: "Bootstrap" }],
+    image: "/assets/work/thumb2.png", // Mantenha ou troque a imagem
+    live: "", // Adicione o link se estiver online
+    Github: "", // Adicione o link do repositório
   },
   {
     num: "02",
-    category: "fullstack",
-    title: "Projeto 2",
+    category: "frontend",
+    title: "Monitoria Digital",
     description:
-      "Um site de portfólio construído com Next.js, Tailwind CSS e Framer Motion.",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
-    image: "/assets/work/thumb2.png",
-    live: "",
-    Github: "",
+      "Plataforma colaborativa para conectar alunos veteranos e calouros. Atuei na criação do layout e na implementação de dashboards interativos com Next.js e TypeScript.",
+    stack: [{ name: "Next.js" }, { name: "TypeScript" }, { name: "Tailwind" }, { name: "SQL" }],
+    image: "/assets/work/thumb1.png", // Mantenha ou troque a imagem
+    live: "", // Adicione o link se estiver online
+    Github: "", // Adicione o link do repositório
   },
   {
     num: "03",

@@ -13,7 +13,7 @@ const Home = () => {
                 {/* Texto e Botão */}
                 <div className="text-center xl:text-left order-2 xl:order-none">
                     <span className="text-xl text-white/80">Desenvolvedor de Software</span>
-                    <h1 className="text-5xl xl:text-6xl mb-6">
+                    <h1 className="text-4xl xl:text-5xl mb-6">
                         Olá, eu sou
                         <br />
                         <span className="text-accent">Vinicius<br />Penedo</span>
