@@ -103,34 +103,42 @@ const skills = {
     {
       icon: <FaHtml5 />,
       name: "HTML 5",
+      color: "group-hover:text-[#e34f26]",
     },
     {
       icon: <FaCss3 />,
       name: "CSS 3",
+      color: "group-hover:text-[#1572b6]",
     },
     {
       icon: <FaJs />,
       name: "JavaScript",
+      color: "group-hover:text-[#f7df1e]",
     },
     {
       icon: <FaReact />,
       name: "React",
+      color: "group-hover:text-[#61dafb]",
     },
     {
       icon: <SiNextdotjs />,
       name: "Next.js",
+      color: "group-hover:text-white",
     },
     {
       icon: <SiTailwindcss />,
       name: "Tailwind CSS",
+      color: "group-hover:text-[#06b6d4]",
     },
     {
       icon: <FaNodeJs />,
       name: "Node.js",
+      color: "group-hover:text-[#339933]",
     },
     {
       icon: <FaFigma />,
       name: "Figma",
+      color: "group-hover:text-[#f24e1e]",
     },
   ]
 }
@@ -146,14 +154,14 @@ const Resume = () => {
           ease: "easeIn",
         },
       }}
-      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
+      className="min-h-[75vh] flex items-center justify-center py-6 xl:py-0"
     >
       <div className="container mx-auto">
         <Tabs
           defaultValue="experience"
-          className="flex flex-col xl:flex-row gap-[60px]"
+          className="flex flex-col xl:flex-row gap-[40px]"
         >
-          <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
+          <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-4">
             <TabsTrigger value="experience">Experiência</TabsTrigger>
             <TabsTrigger value="education">Formação</TabsTrigger>
             <TabsTrigger value="skills">Habilidades</TabsTrigger>
@@ -161,101 +169,97 @@ const Resume = () => {
           </TabsList>
 
           {/* content */}
-          <div className="min-h-[70vh] w-full">
+          <div className="min-h-[50vh] w-full">
             <TabsContent value="experience" className="w-full">
-              <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{experience.title}</h3>  
-                <p className="max-m-[600px] text-white/60 mx-auto xl:mx-0">{experience.description}</p>
-                <ScrollArea className="h-[400px]">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
-                    {experience.items.map((item, index) => {
-                    return (
-                      <li
-  key={index}
-  className="bg-[#232329] p-6 rounded-xl flex flex-col justify-center lg:items-start gap-1 max-w-full"
->
-  <span className="text-accent">{item.duration}</span>
-  <h3 className="text-xl min-h-[40px] text-center lg:text-left break-words">
-    {item.position}
-  </h3>
-  <div className="flex items-center gap-3">
-    <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-    <p className="text-white/60 break-words">{item.company}</p>
-  </div>
-  <p className="text-white/60 mt-2 text-sm break-words">{item.work}</p>
-</li>
-                    )                  
-                    })}</ul>
-                </ScrollArea>
+              <div className="flex flex-col gap-[20px] text-center xl:text-left">
+                <h3 className="text-3xl font-bold text-accent">{experience.title}</h3>  
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 text-sm leading-relaxed">{experience.description}</p>
+                <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[20px]">
+                  {experience.items.map((item, index) => {
+                  return (
+                    <li
+                      key={index}
+                      className="cyber-card p-6 flex flex-col justify-start lg:items-start gap-1 max-w-full"
+                    >
+                      <span className="text-accent text-sm font-mono">{item.duration}</span>
+                      <h3 className="text-lg font-bold text-center lg:text-left break-words">
+                        {item.position}
+                      </h3>
+                      <div className="flex items-center gap-2 mt-1">
+                        <span className="w-[5px] h-[5px] rounded-full bg-accent"></span>
+                        <p className="text-white/60 text-sm break-words">{item.company}</p>
+                      </div>
+                      <p className="text-white/50 mt-2 text-xs leading-relaxed break-words">{item.work}</p>
+                    </li>
+                  )                  
+                  })}
+                </ul>
               </div>
             </TabsContent>
-
+ 
             <TabsContent value="education" className="w-full">
-             <div className="flex flex-col gap-[30px] text-center xl:text-left">
-             <h3 className="text-4xl font-bold">{education.title}</h3>
-             <p className="max-m-[600px] text-white/60 mx-auto xl:mx-0">{education.description}</p>
-                <ScrollArea className="h-[400px]">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
-                    {education.items.map((item, index) => {
-                    return (
-                      <li key={index} className="bg-[#232329] h-[184px] p-6 px-10 rounded-xl flex flex-col justify-center lg:items-start gap-1">
-                        <span className="text-accent">{item.duration}</span>
-                        <h3 className="text-xl  max-w-[260px]min-h-[60p] text-center lg:text-left">{item.degree}</h3>
-                        <div className="flex items-center gap-3">
-                          {/*dat*/}
-                          <span  className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                          <p className="text-white/60">{item.institution}</p>
-                        </div>
-                      </li>
-                    )                  
-                    })}</ul>
-                </ScrollArea>
+             <div className="flex flex-col gap-[20px] text-center xl:text-left">
+               <h3 className="text-3xl font-bold text-accent">{education.title}</h3>
+               <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 text-sm leading-relaxed">{education.description}</p>
+                <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[20px]">
+                  {education.items.map((item, index) => {
+                  return (
+                    <li key={index} className="cyber-card p-6 flex flex-col justify-start lg:items-start gap-1">
+                      <span className="text-accent text-sm font-mono">{item.duration}</span>
+                      <h3 className="text-lg font-bold text-center lg:text-left leading-snug">{item.degree}</h3>
+                      <div className="flex items-center gap-2 mt-1">
+                        <span className="w-[5px] h-[5px] rounded-full bg-accent"></span>
+                        <p className="text-white/60 text-sm">{item.institution}</p>
+                      </div>
+                    </li>
+                  )                  
+                  })}
+                </ul>
              </div>
             </TabsContent>
             
             <TabsContent value="skills" className="w-full h-full">
-             <div className="flex flex-col gap-[30px]">
-                <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{skills.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{skills.description}</p>
-                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
-                  {skills.skillsList.map((skills, index) => {
-                    return (
-                      <li key={index} >
-                        <TooltipProvider delayDuration={100}>
-                          <Tooltip>
-                            <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex items-center justify-center group">
-                             <div className="text-6xl group-hover:text-accent transition-all duration-300">{skills.icon}</div>
-                            </TooltipTrigger>
-                            <TooltipContent>
-                              <p className="capitalize">{skills.name}</p>
-                            </TooltipContent>
-                          </Tooltip>
-                        </TooltipProvider>
-                      </li>
-                    )
-                  })}
-                </ul>
-              </div>
+             <div className="flex flex-col gap-[20px]">
+                <div className="flex flex-col gap-[20px] text-center xl:text-left">
+                  <h3 className="text-3xl font-bold text-accent">{skills.title}</h3>
+                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 text-sm leading-relaxed">{skills.description}</p>
+                  <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[20px]">
+                    {skills.skillsList.map((skillItem, index) => {
+                      return (
+                        <li key={index} >
+                          <TooltipProvider delayDuration={100}>
+                            <Tooltip>
+                              <TooltipTrigger className="w-full h-[120px] cyber-card flex items-center justify-center group">
+                               <div className={`text-5xl ${skillItem.color} transition-all duration-300`}>{skillItem.icon}</div>
+                              </TooltipTrigger>
+                              <TooltipContent>
+                                <p className="capitalize font-mono text-xs">{skillItem.name}</p>
+                              </TooltipContent>
+                            </Tooltip>
+                          </TooltipProvider>
+                        </li>
+                      )
+                    })}
+                  </ul>
+                </div>
              </div>
             </TabsContent>
 
-            <TabsContent value="about" className="w-full text-center  xl:text-left">
-              <div className="flex flex-col gap-[30px]">
-                <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{about.description}</p>
-                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+            <TabsContent value="about" className="w-full">
+              <div className="cyber-card p-6 xl:p-8 flex flex-col gap-[20px] text-center xl:text-left">
+                <h3 className="text-3xl font-bold text-accent">{about.title}</h3>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 text-sm leading-relaxed">{about.description}</p>
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-4 max-w-[650px] mx-auto xl:mx-0 font-mono text-sm">
                   {about.Info.map((item, index ) => {
                         return (
-                          <li key={index} className="flex items-center justify-center xl:justify-start gap-x-4">
-                            <span className="text-white/60">{item.fieldname}</span>
-                            <span className="text-xl">{item.fieldvalue}</span>
+                          <li key={index} className="flex items-center justify-center xl:justify-start gap-x-2 border-b border-white/5 pb-2">
+                            <span className="text-white/40">{item.fieldname}:</span>
+                            <span className="text-white font-semibold">{item.fieldvalue}</span>
                           </li>
                         );
                       })}
                 </ul>
               </div>
-            
             </TabsContent>
 
           </div>

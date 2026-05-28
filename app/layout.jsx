@@ -5,6 +5,7 @@ import "./globals.css"; // Importa estilos globais.
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
+import ElectricMonsterBackground from "@/components/ElectricMonsterBackground";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"], // Apenas caracteres latinos.
@@ -25,12 +26,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en"> 
       <body className={jetbrainsMono.variable}>
+        <ElectricMonsterBackground />
         <Header />
         <StairTransition/>
         <PageTransition>{children} 
         {/* Renderiza os componentes filhos dentro do layout. */}</PageTransition>
-        
-        
       </body>
     </html>
   );

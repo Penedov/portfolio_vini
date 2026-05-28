@@ -1,169 +1,90 @@
 "use client";
 
 import { motion } from "framer-motion";
-import React, { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import { BsArrowUpRight, BsGithub } from "react-icons/bs";
-
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-
 import Link from "next/link";
-import Image from "next/image";
-import WorkSliderBtns from "@/components/ui/WorkSliderBtns";
+import { Button } from "@/components/ui/button";
 
-const projects = [
-  {
-    num: "01",
-    category: "fullstack",
-    title: "Marketplace em PHP",
-    description:
-      "Desenvolvimento de um sistema de marketplace com um CRUD completo, focando na lógica de back-end, integração de APIs e autenticação de usuários.",
-    stack: [{ name: "PHP" }, { name: "Laravel" }, { name: "Bootstrap" }],
-    image: "/assets/work/thumb2.png", // Mantenha ou troque a imagem
-    live: "", // Adicione o link se estiver online
-    Github: "", // Adicione o link do repositório
-  },
-  {
-    num: "02",
-    category: "frontend",
-    title: "Monitoria Digital",
-    description:
-      "Plataforma colaborativa para conectar alunos veteranos e calouros. Atuei na criação do layout e na implementação de dashboards interativos com Next.js e TypeScript.",
-    stack: [{ name: "Next.js" }, { name: "TypeScript" }, { name: "Tailwind" }, { name: "SQL" }],
-    image: "/assets/work/thumb1.png", // Mantenha ou troque a imagem
-    live: "", // Adicione o link se estiver online
-    Github: "", // Adicione o link do repositório
-  },
-  {
-    num: "03",
-    category: "frontend",
-    title: "Projeto 3",
-    description:
-      "Um site de portfólio construído com Next.js, Tailwind CSS e Framer Motion.",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }],
-    image: "/assets/work/thumb3.png",
-    live: "",
-    Github: "",
-  },
-];
-
-const Work = () => {
-  const [project, setProject] = useState(projects[0]);
-
-  const handleSlideChange = (swiper) => {
-    const currentIndex = swiper.activeIndex;
-    setProject(projects[currentIndex]);
-  };
-
+export default function Work() {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{
-        opacity: 1,
-        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
-      }}
-      className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0"
-    >
-      <div className="container mx-auto">
-        <div className="flex flex-col xl:flex-row xl:gap-[30px]">
-          {/* Coluna de informações do projeto */}
-          <div className="w-full xl:w-1/2 xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
-            <div className="flex flex-col gap-[30px] h-[50%]">
-              {/* Número do projeto */}
-              <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
-                {project.num}
-              </div>
-              {/* Categoria do projeto */}
-              <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
-                {project.category === 'frontend' ? 'Projeto Frontend' : project.category === 'fullstack' ? 'Projeto Fullstack' : 'Projeto'}
-              </h2>
-              {/* Descrição do projeto */}
-              <p className="text-white/60">{project.description}</p>
-              {/* Tecnologias usadas */}
-              <ul className="flex gap-4">
-                {project.stack.map((item, index) => {
-                  return (
-                    <li key={index} className="text-xl text-accent">
-                      {item.name}
-                      {index !== project.stack.length - 1 && ","}
-                    </li>
-                  );
-                })}
-              </ul>
-              {/* Borda */}
-              <div className="border border-white/20"></div>
-              {/* Botões */}
-              <div className="flex items-center gap-4">
-                {/* Botão Live project */}
-                <Link href={project.live}>
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Projeto ao vivo</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
-                {/* Botão Github */}
-                <Link href={project.Github}>
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsGithub className="text-white text-3xl group-hover:text-accent" />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Repositório no Github</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
-              </div>
-            </div>
-          </div>
+    <section className="min-h-[75vh] flex flex-col justify-center items-center py-12 relative overflow-hidden">
+      {/* CSS Keyframes for Spotlight Beams */}
+      <style>{`
+        @keyframes swing-left {
+          0%, 100% { transform: rotate(-20deg); opacity: 0.3; }
+          50% { transform: rotate(20deg); opacity: 0.7; }
+        }
+        @keyframes swing-right {
+          0%, 100% { transform: rotate(20deg); opacity: 0.3; }
+          50% { transform: rotate(-20deg); opacity: 0.7; }
+        }
+        .spotlight-left {
+          animation: swing-left 7s ease-in-out infinite;
+        }
+        .spotlight-right {
+          animation: swing-right 9s ease-in-out infinite;
+        }
+        .text-3d-fox {
+          font-family: var(--font-jetbrainsMono), system-ui, sans-serif;
+          font-weight: 900;
+          color: #00ff99;
+          text-shadow: 
+            0 1px 0 #00b16a,
+            0 2px 0 #00a160,
+            0 3px 0 #009156,
+            0 4px 0 #00814c,
+            0 5px 0 #007142,
+            0 6px 0 #006138,
+            0 7px 12px rgba(0, 255, 153, 0.4),
+            0 15px 30px rgba(0, 255, 153, 0.3);
+          transform: perspective(800px) rotateX(25deg) rotateY(-12deg);
+          transform-style: preserve-3d;
+        }
+      `}</style>
 
-          {/* Coluna do slider */}
-          <div className="w-full xl:w-1/2">
-            <Swiper
-              spaceBetween={30}
-              slidesPerView={1}
-              className="xl:h-[520px] mb-12"
-              onSlideChange={handleSlideChange}
-            >
-              {projects.map((project, index) => (
-                <SwiperSlide key={index} className="w-full">
-                  <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
-                    <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
-                    <div className="relative w-full h-full">
-                        <Image
-                            src={project.image}
-                            fill
-                            className="object-cover"
-                            alt={project.title}
-                        />
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ))}
-              {/* Botões do Slider */}
-              <WorkSliderBtns
-                containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
-                btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
-              />
-            </Swiper>
-          </div>
-        </div>
+      {/* Cyber Spotlights (Century Fox Beams) */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        {/* Left Beam */}
+        <div className="spotlight-left absolute bottom-0 left-[25%] w-[110px] h-[700px] bg-gradient-to-t from-accent/20 via-accent/5 to-transparent blur-lg origin-bottom" />
+        {/* Right Beam */}
+        <div className="spotlight-right absolute bottom-0 right-[25%] w-[110px] h-[700px] bg-gradient-to-t from-accent/20 via-accent/5 to-transparent blur-lg origin-bottom" />
+        {/* Center Extra Glow */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[300px] h-[200px] bg-accent/5 rounded-full blur-3xl" />
       </div>
-    </motion.div>
-  );
-};
 
-export default Work;
+      {/* Main 3D Text Container */}
+      <div className="relative z-10 text-center flex flex-col items-center">
+        {/* Futuristic Pedestal Header */}
+        <div className="mb-4 font-mono text-accent text-xs tracking-[0.4em] uppercase border border-accent/20 px-4 py-1.5 rounded bg-primary/40 backdrop-blur-sm">
+          [ MODULE_PROJECTS: SHUTDOWN ]
+        </div>
+
+        {/* 3D Giant Monument Text */}
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.85, y: 30 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-7xl md:text-9xl tracking-tight leading-none text-3d-fox select-none mb-10 py-6"
+        >
+          EM
+          <br />
+          BREVE
+        </motion.div>
+
+        {/* Translucent 3D Pedestal Base */}
+        <div className="w-[300px] md:w-[450px] h-[20px] bg-gradient-to-r from-transparent via-accent/20 to-transparent border-t-2 border-accent/40 rounded-full shadow-[0_-5px_15px_rgba(0,255,153,0.1)] mb-8" />
+
+        {/* Description Panel */}
+        <p className="max-w-[480px] text-white/50 text-sm leading-relaxed mb-8 px-4 font-mono">
+          Uma galeria incrível com meus projetos de destaque, interfaces e soluções completas está sendo desenvolvida.
+        </p>
+
+        {/* Go Back button */}
+        <Link href="/">
+          <Button size="lg" className="bg-accent hover:bg-accent/80 text-primary font-bold transition-all shadow-[0_0_15px_rgba(0,255,153,0.25)] hover:scale-105">
+            Voltar para a Home
+          </Button>
+        </Link>
+      </div>
+    </section>
+  );
+}

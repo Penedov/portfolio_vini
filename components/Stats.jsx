@@ -14,14 +14,14 @@ const Stats = () => {
             <div className="container mx-auto">
                 <div className="flex flex-wrap justify-center gap-10 mx-auto xl:max-w-none">
                     {stats.map((item, index) => (
-                        <div className="flex gap-4 items-center justify-center xl:justify-start min-w-[150px]" key={index}>
+                        <div className="flex gap-4 items-center justify-center xl:justify-start min-w-[200px] cyber-card p-6" key={index}>
                             <CountUp
                                 end={item.num}
                                 duration={5}
                                 delay={2}
-                                className="text-4xl xl:text-6xl font-extrabold"
+                                className="text-4xl xl:text-5xl font-extrabold text-accent"
                             />
-                            <p className="max-w-[200px] leading-snug text-white/80">{item.text}</p>
+                            <p className="max-w-[200px] leading-snug text-white/80 text-sm">{item.text}</p>
                         </div>
                     ))}
                 </div>
