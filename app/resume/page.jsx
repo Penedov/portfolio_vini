@@ -22,19 +22,19 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 const about = {
   title: "Sobre mim",
   description:
-    "Desenvolvedor com forte interesse em back-end e ambição de me tornar um profissional full-stack. Embora tenha mais experiência com PHP, minha paixão está em aprender e construir projetos com tecnologias como Java e TypeScript. Estou em busca da minha primeira oportunidade para colaborar em projetos desafiadores e continuar crescendo na área.",
+    "Estudante de Análise e Desenvolvimento de Sistemas com sólida formação técnica pela ETEC e cursando nível superior na FATEC. Sou uma pessoa comunicativa, organizada, proativa e com grande facilidade em aprender novas tarefas. Busco aplicar meus conhecimentos teóricos e práticos em tecnologia para contribuir com o sucesso de equipes de desenvolvimento.",
   Info: [
     {
       fieldname: "Nome",
-      fieldvalue: "Vinicius",
+      fieldvalue: "Vinicius Santos Penedo",
     },
     {
       fieldname: "Telefone",
-      fieldvalue: "(11) 95895-3041",
+      fieldvalue: "(11) 98513-6752",
     },
     {
       fieldname: "Experiência",
-      fieldvalue: "1 ano",
+      fieldvalue: "3 anos",
     },
     {
       fieldname: "Instagram",
@@ -46,7 +46,7 @@ const about = {
     },
     {
       fieldname: "E-mail",
-      fieldvalue: "Viniciuspenedo2003@gmail.com",
+      fieldvalue: "viniciuspenedo2003@gmail.com",
     },
     {
       fieldname: "Freelance",
@@ -54,27 +54,27 @@ const about = {
     },
     {
       fieldname: "Idiomas",
-      fieldvalue: "Português, Inglês",
+      fieldvalue: "Português (Nativo), Inglês (Básico)",
     },
   ],
 };
 
 const experience = {
   icon: "/assets/resume/badge.svg",
-  title: "Experiência com Projetos",
-  description:"Participei de projetos práticos que me permitiram aplicar e aprimorar minhas habilidades em desenvolvimento front-end e back-end. Trabalhei em equipe e de forma independente para criar soluções funcionais, desde a concepção até a implementação.",
+  title: "Experiência Profissional",
+  description: "Minhas vivências profissionais no mercado de trabalho formal, onde desenvolvi competências de comunicação, organização, trabalho em equipe e logística operacional.",
   items: [
     {
-      company: "Projeto Pessoal",
-      position: "Desenvolvedor PHP",
-      duration: "2024",
-      work:" Criei um marketplace funcional com foco no back-end, implementando um CRUD completo. O maior aprendizado foi lidar com a integração de APIs e a autenticação de usuários, o que solidificou meu entendimento de PHP e Laravel.",
+      company: "Cacau com Gelateria",
+      position: "Suporte Operacional & Estoque",
+      duration: "2023 - 2025",
+      work: "Interface diária com clientes, prestando suporte operacional e tratativa de ocorrências em loja. Gestão e controle de estoque, reposição contínua de insumos e organização do ambiente logístico.",
     },
     {
-      company: "Projeto de TCC (Etec)",
-      position: "Desenvolvedor Front-end",
-      duration: "2024 - 2025",
-      work: "Colaborei no desenvolvimento de uma plataforma de monitoria digital. Fui responsável pela estruturação do layout e pela implementação de funcionalidades no front-end com Next.js e TypeScript, aprendendo a arquitetura da aplicação e a transformar ideias em componentes interativos.",
+      company: "Ragazzo Express",
+      position: "Atendimento & Auxiliar Administrativo",
+      duration: "2022 - 2023",
+      work: "Atendimento ao cliente presencial, organização do fluxo de pedidos, conferência de itens logísticos, garantia de precisão na entrega ao cliente e apoio na gestão de estoque.",
     },
   ]
 }
@@ -82,23 +82,34 @@ const experience = {
 const education = {
   icon: "/assets/resume/cap.svg",
   title: "Minha Formação",
-  description:"Sou graduado em Ciência da Computação pela Universidade da Califórnia, Berkeley. Tenho uma sólida formação em ciência da computação e programação. Sou apaixonado por usar tecnologia para resolver problemas e causar um impacto positivo no mundo.",
-  items:[ {
-    institution: "Universidade da Califórnia",
-    degree: "Bacharelado em Ciência da Computação",
-    duration: "2010 - 2014",
+  description: "Meu percurso educacional focado em tecnologia da informação e qualificações complementares.",
+  items: [
+    {
+      institution: "Fatec",
+      degree: "Tecnologia em Análise e Desenvolvimento de Sistemas",
+      duration: "Cursando",
     },
     {
-    institution: "Universidade de Stanford",
-    degree: "Mestrado em Engenharia de Software",
-    duration: "2014 - 2016",
+      institution: "Etec",
+      degree: "Técnico em Análise e Desenvolvimento de Sistemas",
+      duration: "Concluído em 2025",
+    },
+    {
+      institution: "Fundação Bradesco",
+      degree: "Curso de Excel Intermediário",
+      duration: "Concluído em 2025",
+    },
+    {
+      institution: "Ensino Médio",
+      degree: "Ensino Médio Completo",
+      duration: "Concluído em 2021",
     },
   ]
 };
 
 const skills = {
   title: "Minhas Habilidades",
-  description: "Tenho experiência com HTML, CSS, JavaScript, React e Next.js. Estou sempre em busca de novos desafios e oportunidades para aprender e crescer como desenvolvedor.",
+  description: "Desenvolvo projetos com HTML, CSS, JavaScript, React e Next.js. Além das habilidades técnicas, possuo forte foco em competências como proatividade, organização, adaptabilidade e gestão de tempo.",
   skillsList :[
     {
       icon: <FaHtml5 />,
