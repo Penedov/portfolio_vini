@@ -3,87 +3,108 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { FaLaptopCode, FaGlobe, FaBriefcase, FaDatabase } from "react-icons/fa";
+
+const services = [
+  {
+    num: "01",
+    title: "Landing Pages",
+    description: "Criação de páginas únicas e focadas em conversão, otimizadas para dispositivos móveis e integradas a formulários ou WhatsApp.",
+    techs: "React • Next.js • Tailwind CSS",
+    icon: <FaLaptopCode />,
+  },
+  {
+    num: "02",
+    title: "Sites Institucionais",
+    description: "Desenvolvimento de sites completos para apresentar seu negócio local ou serviços com excelente SEO e design moderno.",
+    techs: "Next.js • UI/UX • SEO",
+    icon: <FaGlobe />,
+  },
+  {
+    num: "03",
+    title: "Portfólios Digitais",
+    description: "Criação de portfólios elegantes e interativos para profissionais liberais e freelancers destacarem seus trabalhos.",
+    techs: "React • Framer Motion • CSS",
+    icon: <FaBriefcase />,
+  },
+  {
+    num: "04",
+    title: "Suporte & Automação",
+    description: "Auxílio operacional, estruturação e análise de dados em planilhas (Excel) e suporte básico de TI/Banco de Dados.",
+    techs: "Excel • Banco de Dados • TI",
+    icon: <FaDatabase />,
+  },
+];
 
 export default function Services() {
   return (
     <section className="min-h-[75vh] flex flex-col justify-center items-center py-12 relative overflow-hidden">
-      {/* CSS Keyframes for Spotlight Beams */}
-      <style>{`
-        @keyframes swing-left {
-          0%, 100% { transform: rotate(-25deg); opacity: 0.3; }
-          50% { transform: rotate(15deg); opacity: 0.7; }
-        }
-        @keyframes swing-right {
-          0%, 100% { transform: rotate(25deg); opacity: 0.3; }
-          50% { transform: rotate(-15deg); opacity: 0.7; }
-        }
-        .spotlight-left {
-          animation: swing-left 6s ease-in-out infinite;
-        }
-        .spotlight-right {
-          animation: swing-right 8s ease-in-out infinite;
-        }
-        .text-3d-fox {
-          font-family: var(--font-jetbrainsMono), system-ui, sans-serif;
-          font-weight: 900;
-          color: #00ff99;
-          text-shadow: 
-            0 1px 0 #00b16a,
-            0 2px 0 #00a160,
-            0 3px 0 #009156,
-            0 4px 0 #00814c,
-            0 5px 0 #007142,
-            0 6px 0 #006138,
-            0 7px 12px rgba(0, 255, 153, 0.4),
-            0 15px 30px rgba(0, 255, 153, 0.3);
-          transform: perspective(800px) rotateX(25deg) rotateY(-12deg);
-          transform-style: preserve-3d;
-        }
-      `}</style>
-
-      {/* Cyber Spotlights (Century Fox Beams) */}
+      {/* Cyber Spotlights Background */}
       <div className="absolute inset-0 pointer-events-none z-0">
-        {/* Left Beam */}
-        <div className="spotlight-left absolute bottom-0 left-[20%] w-[120px] h-[700px] bg-gradient-to-t from-accent/20 via-accent/5 to-transparent blur-lg origin-bottom" />
-        {/* Right Beam */}
-        <div className="spotlight-right absolute bottom-0 right-[20%] w-[100px] h-[700px] bg-gradient-to-t from-accent/20 via-accent/5 to-transparent blur-lg origin-bottom" />
-        {/* Center Extra Glow */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[300px] h-[200px] bg-accent/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-[15%] w-[120px] h-[600px] bg-gradient-to-t from-accent/10 via-accent/5 to-transparent blur-lg origin-bottom rotate-[-12deg]" />
+        <div className="absolute bottom-0 right-[15%] w-[120px] h-[600px] bg-gradient-to-t from-accent/10 via-accent/5 to-transparent blur-lg origin-bottom rotate-[12deg]" />
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[350px] h-[250px] bg-accent/5 rounded-full blur-3xl" />
       </div>
 
-      {/* Main 3D Text Container */}
-      <div className="relative z-10 text-center flex flex-col items-center">
-        {/* Futuristic Pedestal Header */}
-        <div className="mb-4 font-mono text-accent text-xs tracking-[0.4em] uppercase border border-accent/20 px-4 py-1.5 rounded bg-primary/40 backdrop-blur-sm">
-          [ MODULE_SERVICES: SHUTDOWN ]
+      <div className="container mx-auto px-4 relative z-10 flex flex-col items-center">
+        {/* Header Section */}
+        <div className="text-center max-w-[600px] mb-12">
+          <span className="font-mono text-accent text-xs tracking-[0.3em] uppercase border border-accent/20 px-4 py-1.5 rounded bg-primary/40 backdrop-blur-sm mb-4 inline-block">
+            // Catálogo de Serviços
+          </span>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
+            Como posso ajudar seu negócio
+          </h2>
+          <p className="text-white/60 text-sm leading-relaxed font-mono">
+            Soluções digitais focadas em web design, desenvolvimento moderno e suporte administrativo.
+          </p>
         </div>
 
-        {/* 3D Giant Monument Text */}
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.85, y: 30 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-7xl md:text-9xl tracking-tight leading-none text-3d-fox select-none mb-10 py-6"
-        >
-          EM
-          <br />
-          BREVE
-        </motion.div>
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-[1000px] mb-12">
+          {services.map((service, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="cyber-card p-6 flex flex-col justify-between group hover:border-accent/40 hover:shadow-[0_0_20px_rgba(0,255,153,0.1)] transition-all duration-300 relative overflow-hidden border border-white/10 rounded-xl bg-white/5"
+            >
+              <div className="flex justify-between items-start mb-4">
+                <span className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent/40 font-mono">
+                  {service.num}
+                </span>
+                <div className="text-3xl text-white/40 group-hover:text-accent transition-colors duration-300">
+                  {service.icon}
+                </div>
+              </div>
 
-        {/* Translucent 3D Pedestal Base */}
-        <div className="w-[300px] md:w-[450px] h-[20px] bg-gradient-to-r from-transparent via-accent/20 to-transparent border-t-2 border-accent/40 rounded-full shadow-[0_-5px_15px_rgba(0,255,153,0.1)] mb-8" />
+              <div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-accent transition-colors duration-300">
+                  {service.title}
+                </h3>
+                <p className="text-white/60 text-sm leading-relaxed mb-4">
+                  {service.description}
+                </p>
+              </div>
 
-        {/* Description Panel */}
-        <p className="max-w-[480px] text-white/50 text-sm leading-relaxed mb-8 px-4 font-mono">
-          Estou preparando um catálogo de serviços incríveis utilizando as mais modernas tecnologias de desenvolvimento e design.
-        </p>
+              <div className="border-t border-white/5 pt-4 mt-auto">
+                <span className="text-xs font-mono text-accent/80 tracking-wide uppercase">
+                  {service.techs}
+                </span>
+              </div>
+            </motion.div>
+          ))}
+        </div>
 
-        {/* Go Back button */}
-        <Link href="/">
-          <Button size="lg" className="bg-accent hover:bg-accent/80 text-primary font-bold transition-all shadow-[0_0_15px_rgba(0,255,153,0.25)] hover:scale-105">
-            Voltar para a Home
-          </Button>
-        </Link>
+        {/* Call to Action */}
+        <div className="text-center">
+          <Link href="/contact">
+            <Button size="lg" className="bg-accent hover:bg-accent/80 text-primary font-bold transition-all shadow-[0_0_15px_rgba(0,255,153,0.25)] hover:scale-105">
+              Falar sobre um Projeto
+            </Button>
+          </Link>
+        </div>
       </div>
     </section>
   );
